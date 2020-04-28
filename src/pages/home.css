@@ -1,0 +1,14 @@
+/* 
+  黑#303841
+  蓝#00adb5
+  白#eeeeee
+  橙#ff5722
+*/
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

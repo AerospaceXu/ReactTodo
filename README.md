@@ -1,4 +1,4 @@
-使用纯 React 开发，无 Redux 及其他插件。
+使用 React Hooks 开发。
 
 双击面板即可增加新待办事项
 
