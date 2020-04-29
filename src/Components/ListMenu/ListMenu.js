@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import './ListMenu.css'
 
-import { AppContext } from '../list'
+import { AppContext } from '../../list'
 
 export default (props) => {
   const [selectValue, setSelectValue] = useState('mid')

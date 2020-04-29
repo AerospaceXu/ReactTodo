@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Board.css'
 
-import ListItem from './ListItem'
+import { AppContext } from '../../list'
+
+import ListItem from '../ListItem/ListItem'
 
 const boardNameValue = {
   notStart: '未开始',
@@ -15,9 +17,9 @@ const colorValue = {
   done: '#00969b'
 }
 
-const createNewItem = () => {}
-
 export default (props) => {
+  const { dispatch } = useContext(AppContext)
+
   const boardType = props.type
   const boardName = boardNameValue[boardType]
   const panelColor = colorValue[boardType]
@@ -41,7 +43,9 @@ export default (props) => {
     <div
       className='board-panel'
       style={{ backgroundColor: panelColor }}
-      onDoubleClick={createNewItem}
+      onDoubleClick={() => {
+        dispatch({ type: 'newItem' })
+      }}
     >
       <h1 className='board-name'>{boardName}</h1>
       <hr />

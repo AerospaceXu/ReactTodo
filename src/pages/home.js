@@ -1,7 +1,7 @@
 import './home.css'
 import React, { useContext } from 'react'
 
-import Board from '../Components/Board'
+import Board from '../Components/Board/Board'
 
 import { AppContext } from '../list'
 

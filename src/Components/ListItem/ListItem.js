@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react'
 import './ListItem.css'
 
-import ListMenu from './ListMenu'
+import ListMenu from '../ListMenu/ListMenu'
 
-import { AppContext } from '../list'
+import { AppContext } from '../../list'
 
 export default (props) => {
   const [menu, setMenu] = useState(false)
