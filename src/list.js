@@ -10,7 +10,7 @@ const defaultState = [
   {
     id: 1,
     listName: 'p5.js',
-    listRemark: '是用ml5一起配合',
+    listRemark: '周五前完成',
     state: 'doing'
   }
 ]
@@ -42,6 +42,16 @@ const reducer = (state, action) => {
         return item.id !== action.id
       })
       break
+    case 'newItem':
+      const newItem = {
+        id: newState[newState.length - 1].id + 1,
+        listName: '',
+        listRemark: '',
+        state: 'notStart'
+      }
+      newState.push(newItem)
+      tempState = newState
+      break
     default:
       break
   }
@@ -50,6 +60,7 @@ const reducer = (state, action) => {
 
 export const List = (props) => {
   const [list, dispatch] = useReducer(reducer, defaultState)
+
   return (
     <AppContext.Provider value={{ list, dispatch }}>
       {props.children}
