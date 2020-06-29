@@ -8,9 +8,9 @@ import { AppContext } from '../list'
 export default function () {
   const { list } = useContext(AppContext)
 
-  const notStartList = list.filter((item) => item.state === 'notStart')
-  const doingList = list.filter((item) => item.state === 'doing')
-  const doneList = list.filter((item) => item.state === 'done')
+  const notStartList = list.filter(item => item.state === 'notStart')
+  const doingList = list.filter(item => item.state === 'doing')
+  const doneList = list.filter(item => item.state === 'done')
 
   return (
     <div className='container'>
